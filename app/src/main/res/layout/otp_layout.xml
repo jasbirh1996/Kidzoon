@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:background="@drawable/dialog_curve_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/bold_italic"
+                    android:padding="10dp"
+                    android:layout_toStartOf="@id/ivClose"
+                    android:text="@string/please_enter_4_digit_otp_sent_on_your_number_as_sms"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/skip"
+                    android:padding="7dp"/>
+
+
+            </RelativeLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:paddingBottom="15dp"
+               android:background="@color/colorWhite">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:orientation="horizontal"
+                   android:padding="10dp"
+                   android:gravity="center">
+
+                   <com.mukesh.OtpView
+                       android:id="@+id/otpView"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       app:viewType="line"
+                       android:textAlignment="center"
+                       android:layout_gravity="center"
+                       android:gravity="center"
+                       app:itemWidth="70dp"
+                       app:lineColor="@color/colorDarkGrey"
+                       android:textColor="@color/colorDark"
+                       app:itemHeight="40dp"
+                       android:textSize="16sp"
+                       android:inputType="number"
+                       style="@style/newTheme"
+                       app:itemSpacing="13dp"
+                       android:focusable="true"
+                       android:focusableInTouchMode="true">
+                       <requestFocus/>
+
+                   </com.mukesh.OtpView>
+
+
+
+
+
+               </LinearLayout>
+
+               <TextView
+                   android:id="@+id/tvTimer"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_horizontal"
+                   android:fontFamily="@font/bold_italic"
+                   android:layout_marginTop="15dp"
+                   android:textColor="@color/colorDark"
+                   android:textSize="22sp"
+                   android:text="00:10"
+                   android:visibility="visible"/>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:id="@+id/llResendOtp"
+                   android:padding="10dp"
+                   android:visibility="gone"
+                   android:layout_gravity="center"
+                   >
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:fontFamily="@font/bold_italic"
+                       android:text="@string/didnt_receive_any_code"
+                       android:textColor="@color/colorDark"
+                       android:textSize="12sp"/>
+
+                   <TextView
+                       android:id="@+id/tvResend"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="5dp"
+                       android:fontFamily="@font/bold_italic"
+                       android:text="@string/resend_a_new_code"
+                       android:textColor="@color/colorRed"
+                       android:layout_gravity="center"
+                       android:textSize="12sp"
+                       android:padding="5dp"/>
+               </LinearLayout>
+
+
+
+           </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+</RelativeLayout>

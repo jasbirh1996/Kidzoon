@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"
+    android:padding="7dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/llUserImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="start|center_vertical"
+            android:gravity="center">
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/profile_image"
+                app:siBorderColor="@color/colorWhite"
+                app:siRadius="20dp" />
+
+            <ImageView
+                android:id="@+id/ivStatus"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-5dp"
+                android:src="@drawable/notification_post_like" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/bold_italic"
+            android:text="Saad "
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorDark"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorDarkGrey" />
+
+
+</LinearLayout>

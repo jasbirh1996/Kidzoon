@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_above="@id/cvBottom"
+        android:layout_height="match_parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="@color/colorOrange"
+        app:cardCornerRadius="10dp"
+       android:layout_marginBottom="-7dp">
+
+
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorOrange"
+        android:orientation="horizontal"
+        android:elevation="4dp"
+        android:padding="7dp"
+        android:weightSum="3">
+
+
+        <LinearLayout
+            android:id="@+id/llFeeds"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+
+            <ImageView
+                android:id="@+id/ivFeeds"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:padding="6dp"
+                android:layout_gravity="center"
+                android:src="@drawable/feeds"/>
+
+            <TextView
+                android:id="@+id/tvFeeds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:fontFamily="@font/bold_italic"
+                android:text="@string/feeds"
+                android:textColor="@color/colorDark"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llChat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+
+            <ImageView
+                android:id="@+id/ivChat"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:padding="4dp"
+                android:src="@drawable/chat"/>
+
+            <TextView
+                android:id="@+id/tvChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="10sp"
+                android:text="@string/chat"
+                android:fontFamily="@font/bold_italic"
+                android:textColor="@color/colorDark"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+
+            <ImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:padding="4dp"
+                android:src="@drawable/profile_tab"/>
+
+            <TextView
+                android:id="@+id/tvProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="10sp"
+                android:text="@string/profile"
+                android:fontFamily="@font/bold_italic"
+                android:textColor="@color/colorDark"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

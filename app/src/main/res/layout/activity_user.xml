@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.UserActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/red_background_toolbar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/login_edittext_bg"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        
+        <ImageView
+            android:id="@+id/ivUserImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/user_name"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tvUserId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivUserImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:theme="@style/InputTextLayoutHint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUserId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/user_id"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/bold_italic"
+                android:textSize="13sp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorDark"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvUserNameError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/your_username_must_be_15_characters_or_less_and_contain_only_letters_numbers_and_underscores_and_no_spaces"
+        android:textColor="@color/colorRed"
+        android:fontFamily="@font/bold_italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clUser"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="35dp"
+        />
+
+    <TextView
+        android:id="@+id/tvSaveId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_user_name"
+        app:layout_constraintStart_toStartOf="@id/clUser"
+        app:layout_constraintEnd_toEndOf="@id/clUser"
+        app:layout_constraintTop_toBottomOf="@id/tvUserNameError"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bg"
+       android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/bold_italic"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

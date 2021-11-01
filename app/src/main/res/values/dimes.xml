@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="animated_text_carousel_text_size">20sp</dimen>
+    <dimen name="animated_text_carousel_view_pager_padding_horizontal">145dp</dimen>
+    <dimen name="animated_text_carousel_view_pager_padding_right">125dp</dimen>
+
+    <item name="animated_text_carousel_deselected_text_alpha" type="dimen" format="float">0.3</item>
+    <item name="animated_text_carousel_scale_factor" type="dimen" format="float">50</item>
+</resources>

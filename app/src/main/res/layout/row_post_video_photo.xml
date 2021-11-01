@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="120dp"
+    android:layout_marginStart="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/profile_image"
+        app:siRadius="10dp"
+        app:siBorderColor="@color/colorWhite"
+        android:visibility="gone"/>
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/ivVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/profile_image"
+        app:siRadius="10dp"
+        app:siBorderColor="@color/colorWhite"
+        android:visibility="visible"/>
+    
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/ivCross"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:siRadius="12dp"
+       android:layout_margin="5dp"
+        android:src="@drawable/cross"
+        android:visibility="visible"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:id="@+id/ivPlayVideo"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:padding="10dp"
+        android:src="@drawable/video_2"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

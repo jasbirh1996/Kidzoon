@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.SelectGenderActivity">
+
+    <include
+        layout="@layout/transparent_toolbar"/>
+
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlMale"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:background="@drawable/gender_bg"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/male" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSelectedMale"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:background="@drawable/selected_gender_bg"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/male" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/right_tik"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/bold_italic"
+            android:padding="10dp"
+            android:text="@string/male"
+            android:textColor="@color/colorDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llMale"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlFemale"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:visibility="visible"
+            android:background="@drawable/gender_bg">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/female" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSelectedFemale"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:visibility="gone"
+            android:background="@drawable/selected_gender_bg">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/female" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/right_tik"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/bold_italic"
+            android:padding="10dp"
+            android:text="@string/female"
+            android:textColor="@color/colorDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_bg"
+        android:backgroundTint="@color/colorLightGrey"
+        android:paddingStart="60dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="60dp"
+        android:paddingBottom="15dp"
+        android:fontFamily="@font/bold_italic"
+        android:text="@string/next"
+        android:textColor="@color/colorDarkGrey"/>
+
+        <TextView
+            android:id="@+id/btnSelectedNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_bg"
+            android:paddingStart="60dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="60dp"
+            android:paddingBottom="15dp"
+            android:fontFamily="@font/bold_italic"
+            android:text="@string/next"
+            android:textColor="@color/colorWhite"/>
+
+</RelativeLayout>
+
+
+</LinearLayout>

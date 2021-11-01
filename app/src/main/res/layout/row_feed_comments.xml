@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:paddingStart="10dp">
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/ivUserProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/profile_image"
+        app:siBorderColor="@color/colorWhite"
+        app:siRadius="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:id="@+id/llUserComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/comment_default_gradient"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvCommentBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:fontFamily="@font/bold_italic"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvCommentDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold_italic"
+                android:paddingTop="2dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+        </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/colorOrange"
+                android:layout_gravity="end"
+                android:padding="5dp"
+                android:layout_marginEnd="5dp"
+               android:layout_marginTop="-13dp">
+
+                <ImageView
+                    android:id="@+id/ivLike"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/like"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorDark"
+                    android:fontFamily="@font/bold_italic"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold_italic"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/tvLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/bold_italic"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/tvReply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold_italic"
+                android:text="@string/reply"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="11dp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

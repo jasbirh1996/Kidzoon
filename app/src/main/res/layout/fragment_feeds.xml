@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragments.FeedsFragment">
+
+    <include
+        layout="@layout/home_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp">
+
+                <com.github.siyamed.shapeimageview.RoundedImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/profile_image"
+                    app:siBorderColor="@color/colorOrange"
+                    app:siBorderWidth="3dp"
+                    app:siRadius="15dp"
+                    app:siSquare="true"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/premium"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="7dp"
+                    android:layout_alignParentTop="true"/>
+
+                <TextView
+                    android:id="@+id/tvLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Level 4"
+                    android:textSize="10sp"
+                    android:textColor="@color/colorDark"
+                    android:fontFamily="@font/bold_italic"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/btn_bg"
+                    android:backgroundTint="@color/colorOrange"
+                   android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                   android:layout_centerHorizontal="true"
+                    />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/flAddStory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/rect_add_story_bg">
+
+                    <TextView
+                        android:id="@+id/tvAddStory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center_vertical"
+                        android:layout_marginStart="30dp"
+                        android:fontFamily="@font/bold_italic"
+                        android:padding="15dp"
+                        android:text="@string/add_story"
+                        android:textStyle="bold"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorLightGreen"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivMultiChoice"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center|start"
+                    android:src="@drawable/add" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:background="@drawable/video_photo_bg">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/video"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/video"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/bold_italic"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_marginStart="7dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:background="@drawable/video_photo_bg"
+                android:backgroundTint="@color/colorBlue">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/photo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/photo"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/bold_italic"
+                    android:gravity="center"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/dashed_line" />
+
+
+        <include
+            layout="@layout/layout_recycler_view" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

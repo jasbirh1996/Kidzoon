@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditPostActivity">
+
+    <include
+        android:id="@+id/llToolbar"
+        layout="@layout/transparent_toolbar"/>
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/ivUser"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/profile_image"
+        app:siBorderColor="@color/colorOrange"
+        app:siRadius="20dp"
+        app:siBorderWidth="2dp"
+        android:padding="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llToolbar"/>
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saad Almubaraz"
+        android:textStyle="bold"
+        android:textColor="@color/colorDark"
+        android:fontFamily="@font/bold_italic"
+        app:layout_constraintTop_toBottomOf="@id/llToolbar"
+        app:layout_constraintStart_toEndOf="@id/ivUser"
+        android:textSize="14sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvUserName"
+        app:layout_constraintStart_toEndOf="@id/ivUser"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:padding="10dp"
+        android:background="@drawable/post_visibility_bg">
+
+        <ImageView
+            android:id="@+id/ivPostVisibility"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/visibility"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvPostVisibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/public_"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:textColor="@color/colorDark"
+            android:fontFamily="@font/bold_italic"
+            app:layout_constraintStart_toEndOf="@id/ivPostVisibility"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivDropdown"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/dropdown_solid"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="7dp"
+            app:layout_constraintStart_toEndOf="@id/tvPostVisibility"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/tvPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="It is a long established fact that a reader will bedistracted by the readable content of a page when looking at its layout. "
+        android:textColor="@color/colorDark"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/ivUser"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/bold_italic"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPostMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toTopOf="@id/viewBottom"/>
+
+    <View
+        android:id="@+id/viewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDarkGrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/llPostMedia"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llPostMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/colorLightGrey"
+       >
+        
+        <ImageView
+            android:id="@+id/ivPostPhoto"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/black_photo"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivPostVideo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/video_new_post"
+            android:padding="10dp"
+          app:layout_constraintStart_toEndOf="@id/ivPostPhoto"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivYoutubeLink"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/youtube_new_post"
+            android:padding="10dp"
+            app:layout_constraintStart_toEndOf="@id/ivPostVideo"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <ImageView
+            android:id="@+id/ivPostGif"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/gif_new_post"
+            android:padding="10dp"
+            app:layout_constraintStart_toEndOf="@id/ivYoutubeLink"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivHashtag"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/hastag_new_post"
+            android:padding="10dp"
+            app:layout_constraintStart_toEndOf="@id/ivPostGif"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <ImageView
+            android:id="@+id/ivKeyboard"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:src="@drawable/keyboard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorWhite"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

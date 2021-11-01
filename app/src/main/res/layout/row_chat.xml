@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    android:paddingStart="10dp"
+    android:paddingTop="15dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:id="@+id/llReceiverChatMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom"
+                android:src="@drawable/receiver" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_receiver_bg"
+                android:orientation="vertical"
+                android:layout_marginStart="-11dp"
+                android:layout_marginBottom="1dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tvAgentMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="@font/bold_italic"
+                    android:text="jgjjsjgjgydqhjdgjg"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvChatReceivingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:34:34 PM"
+            android:textSize="10sp"
+            android:fontFamily="@font/bold_italic"
+            android:textColor="@color/colorDarkGrey"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSenderChatMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sender_chat_bg"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvSenderMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:fontFamily="@font/bold_italic"
+                    android:text="fjhgsjgjagdjasgjagdgg"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="-9dp"
+                android:layout_marginBottom="-5dp"
+                android:src="@drawable/sender" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvChatSendingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:34:34 PM"
+            android:textSize="10sp"
+            android:fontFamily="@font/bold_italic"
+            android:textColor="@color/colorDarkGrey"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="start"
+    android:id="@+id/llReceiverChatPhoto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/receiver" />
+
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:src="@drawable/profile_image"
+            app:siBorderColor="@color/colorLightBrown"
+            app:siBorderWidth="3dp"
+            app:siRadius="10dp"
+            android:layout_marginStart="-11dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPhotoReceivingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:34:34 PM"
+        android:textSize="10sp"
+        android:fontFamily="@font/bold_italic"
+        android:textColor="@color/colorDarkGrey"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSenderChatPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="end"
+        android:gravity="end">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile_image"
+                app:siBorderColor="@color/colorRed"
+                app:siBorderWidth="3dp"
+                app:siRadius="10dp" />
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="-11dp"
+                android:layout_marginBottom="-2dp"
+                android:src="@drawable/sender" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPhotoSendingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:34:34 PM"
+            android:textSize="10sp"
+            android:fontFamily="@font/bold_italic"
+            android:textColor="@color/colorDarkGrey"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="start"
+        android:gravity="start"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/llReceiverVoiceMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="-5dp"
+                android:src="@drawable/receiver" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="7dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="-8dp"
+                android:background="@drawable/chat_receiver_bg">
+
+                <ImageView
+                    android:id="@+id/ivPlayVoice"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/play_selected"/>
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:progress="0"
+                    android:maxHeight="2dp"
+                    android:layout_toStartOf="@id/tvVoiceTimer"
+                    android:layout_toEndOf="@id/ivPlayVoice"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:thumb="@drawable/seekbar_thumb"/>
+
+
+                <TextView
+                    android:id="@+id/tvVoiceTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="05:12"
+                    android:padding="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="12sp"
+                    android:textAlignment="viewEnd"
+                    android:fontFamily="@font/bold_italic" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvVoiceReceivingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:34:34 PM"
+            android:textSize="10sp"
+            android:fontFamily="@font/bold_italic"
+            android:textColor="@color/colorDarkGrey"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSenderVoiceMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="7dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/sender_chat_bg">
+
+                <ImageView
+                    android:id="@+id/ivPlaySenderVoice"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/play"/>
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:progress="0"
+                    android:maxHeight="2dp"
+                    android:layout_toStartOf="@id/tvVoiceSenderTimer"
+                    android:layout_toEndOf="@id/ivPlaySenderVoice"
+                    android:progressDrawable="@drawable/seekbar_sender_style"
+                    android:thumb="@drawable/seekbar_thumb"
+                    android:thumbTint="@color/colorWhite"/>
+
+
+                <TextView
+                    android:id="@+id/tvVoiceSenderTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="05:12"
+                    android:padding="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorWhite"
+                    android:textAlignment="viewEnd"
+                    android:fontFamily="@font/bold_italic" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="-10dp"
+                android:layout_marginBottom="-3dp"
+                android:src="@drawable/sender" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvVoiceSendingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:34:34 PM"
+            android:textSize="10sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/bold_italic"
+            android:textColor="@color/colorDarkGrey"
+            android:layout_gravity="center_vertical|end" />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

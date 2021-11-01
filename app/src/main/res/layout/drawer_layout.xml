@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp"
+        android:background="@color/colorRed">
+
+
+        <ImageView
+            android:id="@+id/btnCancel"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/profile_close" />
+
+
+    </RelativeLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:layout_below="@id/llTop"
+           android:layout_marginTop="-35dp"
+          android:paddingStart="10dp"
+           android:paddingTop="10dp">
+
+           <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:padding="13dp"
+                   android:layout_marginStart="15dp"
+                   android:layout_marginEnd="15dp"
+                   android:background="@drawable/drawer_top_profile_bg">
+
+                   <RelativeLayout
+                       android:layout_width="60dp"
+                       android:layout_height="60dp"
+                       android:gravity="start">
+
+                       <com.github.siyamed.shapeimageview.RoundedImageView
+                           android:layout_width="50dp"
+                           android:layout_height="50dp"
+                           android:src="@drawable/male"
+                           app:siBorderColor="@color/colorOrange"
+                           app:siBorderWidth="1dp"
+                           app:siRadius="15dp"
+                           android:id="@+id/ivUserImage"
+                           app:siSquare="true"
+                           android:layout_centerInParent="true"/>
+
+                       <ImageView
+                           android:layout_width="20dp"
+                           android:layout_height="20dp"
+                           android:src="@drawable/premium"
+                           android:layout_alignParentEnd="true"
+                           android:layout_marginTop="7dp"
+                           android:layout_alignParentTop="true"/>
+
+                       <TextView
+                           android:id="@+id/tvLevel"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Level 4"
+                           android:textSize="10sp"
+                           android:textColor="@color/colorDark"
+                           android:fontFamily="@font/bold_italic"
+                           android:layout_alignParentBottom="true"
+                           android:background="@drawable/btn_bg"
+                           android:backgroundTint="@color/colorOrange"
+                           android:paddingTop="3dp"
+                           android:paddingBottom="3dp"
+                           android:paddingStart="7dp"
+                           android:paddingEnd="7dp"
+                           android:layout_centerHorizontal="true"
+                           />
+
+                   </RelativeLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:padding="10dp"
+                       android:layout_gravity="center_vertical">
+
+
+
+                       <TextView
+                           android:id="@+id/tvName"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Saad Almubarraz"
+                           android:textSize="14sp"
+                           android:layout_gravity="start|center_vertical"
+                           android:textColor="@color/colorDark"
+                           android:fontFamily="@font/bold_italic"
+                           android:gravity="start|center_vertical"
+                           android:textAlignment="viewStart"/>
+
+                       <TextView
+                           android:id="@+id/tvUserId"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Saad Almubarraz"
+                           android:textSize="12sp"
+                           android:layout_gravity="start|center_vertical"
+                           android:textColor="@color/colorDarkGrey"
+                           android:fontFamily="@font/bold_italic"
+                           android:gravity="start|center_vertical"
+                           android:textAlignment="viewStart"/>
+
+                   </LinearLayout>
+
+               </LinearLayout>
+
+           <ScrollView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginTop="20dp"
+                   android:layout_marginStart="30dp">
+
+                   <LinearLayout
+                       android:id="@+id/llProfileInfo"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/profile_unselected"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:paddingTop="10dp"
+                           android:paddingStart="10dp"
+                           android:layout_gravity="center_vertical">
+
+
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/profile_information"
+                               android:textColor="@color/colorDark"
+                               android:textSize="13sp"
+                               android:layout_gravity="start"
+                               android:textAlignment="viewStart"
+                               android:fontFamily="@font/bold_italic"/>
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="0.5dp"
+                               android:layout_marginTop="15dp"
+                               android:background="@color/colorDarkGrey"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/llFriendRequest"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/friend_request"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:paddingTop="10dp"
+                           android:paddingStart="10dp"
+                           android:layout_gravity="center_vertical">
+
+
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/friend_request"
+                               android:textColor="@color/colorDark"
+                               android:textSize="13sp"
+                               android:layout_gravity="start"
+                               android:textAlignment="viewStart"
+                               android:fontFamily="@font/bold_italic"/>
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="0.5dp"
+                               android:layout_marginTop="15dp"
+                               android:background="@color/colorDarkGrey"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/llFollowRequest"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/follow_request"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:paddingTop="10dp"
+                           android:paddingStart="10dp"
+                           android:layout_gravity="center_vertical">
+
+
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/follow_request"
+                               android:textColor="@color/colorDark"
+                               android:textSize="13sp"
+                               android:layout_gravity="start"
+                               android:textAlignment="viewStart"
+                               android:fontFamily="@font/bold_italic"/>
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="0.5dp"
+                               android:layout_marginTop="15dp"
+                               android:background="@color/colorDarkGrey"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/llUserId"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/user_name"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:paddingTop="10dp"
+                           android:paddingStart="10dp"
+                           android:layout_gravity="center_vertical">
+
+
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/user_name"
+                               android:textColor="@color/colorDark"
+                               android:textSize="13sp"
+                               android:layout_gravity="start"
+                               android:textAlignment="viewStart"
+                               android:fontFamily="@font/bold_italic"/>
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="0.5dp"
+                               android:layout_marginTop="15dp"
+                               android:background="@color/colorDarkGrey"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/llNotificationSetting"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/menu_notifiaction"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:paddingTop="10dp"
+                           android:paddingStart="10dp"
+                           android:layout_gravity="center_vertical">
+
+
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/notification_settings"
+                               android:textColor="@color/colorDark"
+                               android:textSize="13sp"
+                               android:layout_gravity="start"
+                               android:textAlignment="viewStart"
+                               android:fontFamily="@font/bold_italic"/>
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="0.5dp"
+                               android:layout_marginTop="15dp"
+                               android:background="@color/colorDarkGrey"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/llPrivacySetting"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/privacy"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:paddingTop="10dp"
+                           android:paddingStart="10dp"
+                           android:layout_gravity="center_vertical">
+
+
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/privacy_settings"
+                               android:textColor="@color/colorDark"
+                               android:textSize="13sp"
+                               android:layout_gravity="start"
+                               android:textAlignment="viewStart"
+                               android:fontFamily="@font/bold_italic"/>
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="0.5dp"
+                               android:layout_marginTop="15dp"
+                               android:background="@color/colorDarkGrey"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+
+                   <LinearLayout
+                       android:id="@+id/llTerms"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/terms"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:paddingTop="10dp"
+                           android:paddingStart="10dp"
+                           android:layout_gravity="center_vertical">
+
+
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/terms_of_use"
+                               android:textColor="@color/colorDark"
+                               android:textSize="13sp"
+                               android:layout_gravity="start"
+                               android:textAlignment="viewStart"
+                               android:fontFamily="@font/bold_italic"/>
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="0.5dp"
+                               android:layout_marginTop="15dp"
+                               android:background="@color/colorDarkGrey"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/llChangeLanguage"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/change_lunguage"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:paddingTop="10dp"
+                           android:paddingStart="10dp"
+                           android:layout_gravity="center_vertical">
+
+                           <RelativeLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content">
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/change_language"
+                                   android:textColor="@color/colorDark"
+                                   android:textSize="13sp"
+                                   android:layout_alignParentStart="true"
+                                   android:layout_centerVertical="true"
+                                   android:fontFamily="@font/bold_italic"/>
+
+                               <TextView
+                                   android:id="@+id/tvLanguage"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="@string/english"
+                                   android:textColor="@color/colorDarkGrey"
+                                   android:layout_alignParentEnd="true"
+                                   android:padding="5dp"
+                                   android:fontFamily="@font/bold_italic"
+                                   android:textSize="12sp"
+                                   android:layout_centerVertical="true"/>
+
+                           </RelativeLayout>
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="0.5dp"
+                               android:layout_marginTop="15dp"
+                               android:background="@color/colorDarkGrey"/>
+
+                       </LinearLayout>
+
+
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/llChangePassword"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/password"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:paddingTop="10dp"
+                           android:paddingStart="10dp"
+                           android:layout_gravity="center_vertical">
+
+
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/change_password"
+                               android:textColor="@color/colorDark"
+                               android:textSize="13sp"
+                               android:layout_gravity="start"
+                               android:textAlignment="viewStart"
+                               android:fontFamily="@font/bold_italic"/>
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="0.5dp"
+                               android:layout_marginTop="15dp"
+                               android:background="@color/colorDarkGrey"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+
+                   <LinearLayout
+                       android:id="@+id/llShareApp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/share_menu"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:paddingTop="10dp"
+                           android:paddingStart="10dp"
+                           android:layout_gravity="center_vertical">
+
+
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/share_app"
+                               android:textColor="@color/colorDark"
+                               android:textSize="13sp"
+                               android:layout_gravity="start"
+                               android:textAlignment="viewStart"
+                               android:fontFamily="@font/bold_italic"/>
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="0.5dp"
+                               android:layout_marginTop="15dp"
+                               android:background="@color/colorDarkGrey"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:id="@+id/llLogOut"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:layout_gravity="center_vertical"
+                           android:src="@drawable/log_out"/>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical"
+                           android:paddingTop="10dp"
+                           android:paddingStart="10dp"
+                           android:layout_gravity="center_vertical">
+
+
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="@string/log_out"
+                               android:textColor="@color/colorDark"
+                               android:textSize="13sp"
+                               android:layout_gravity="start"
+                               android:textAlignment="viewStart"
+                               android:fontFamily="@font/bold_italic"/>
+
+                           <View
+                               android:layout_width="match_parent"
+                               android:layout_height="0.5dp"
+                               android:layout_marginTop="15dp"
+                               android:background="@color/colorDarkGrey"/>
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+
+
+
+               </LinearLayout>
+           </ScrollView>
+
+
+       </LinearLayout>
+
+</RelativeLayout>

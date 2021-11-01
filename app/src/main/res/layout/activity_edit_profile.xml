@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.EditProfileActivity">
+
+    <include
+        android:id="@+id/llTop"
+        layout="@layout/red_background_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_below="@id/llTop">
+
+        <LinearLayout
+            android:id="@+id/llName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="25dp"
+            android:padding="5dp"
+            android:background="@drawable/login_edittext_bg">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/profile_unselected"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="7dp"
+                android:theme="@style/InputTextLayoutHint">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:inputType="text"
+                    android:hint="@string/your_name"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/colorDark"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/bold_italic"
+                    android:padding="7dp"
+                    android:textColorHint="@color/colorDark"
+                    android:layout_gravity="start|center_vertical"
+                    android:textAlignment="viewStart"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:background="@drawable/login_edittext_bg">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/email"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="7dp"
+                android:theme="@style/InputTextLayoutHint">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/enter_your_email_address"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/colorDark"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/bold_italic"
+                    android:padding="7dp"
+                    android:textColorHint="@color/colorDark"
+                    android:layout_gravity="start|center_vertical"
+                    android:textAlignment="viewStart"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layoutDirection="ltr"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_edittext_bg">
+
+            <TextView
+                android:id="@+id/tvDialCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+966"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorDark"
+                android:layout_gravity="start|center_vertical"
+                android:textSize="15sp"
+                android:fontFamily="@font/bold_italic"
+                android:textAlignment="viewStart"/>
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/dropdown"
+                android:layout_marginStart="10dp"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="7dp"
+                android:background="@color/colorDarkGrey"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/mobile"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="7dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:theme="@style/InputTextLayoutHint">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:inputType="phone"
+                    android:hint="@string/mobile_number"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/colorDark"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/bold_italic"
+                    android:padding="7dp"
+                    android:textColorHint="@color/colorDark"
+                    android:layout_gravity="start|center_vertical"
+                    android:textAlignment="viewStart"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/login_edittext_bg">
+
+            <ImageView
+                android:id="@+id/ivGender"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/gender"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ivGender"
+                android:layout_toStartOf="@id/ivDropDown"
+                android:layout_marginStart="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorDarkGrey"
+                    android:fontFamily="@font/bold_italic"
+                    android:text="@string/gender"
+                    android:layout_gravity="start"
+                    android:textAlignment="viewStart"/>
+
+                <TextView
+                    android:id="@+id/tvGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorDark"
+                    android:fontFamily="@font/bold_italic"
+                    android:text="male"
+                    android:layout_gravity="start"
+                    android:textAlignment="viewStart"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivDropDown"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="8dp"
+                android:src="@drawable/dropdown"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/login_edittext_bg">
+
+            <ImageView
+                android:id="@+id/ivDob"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/dob"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ivDob"
+                android:layout_toStartOf="@id/ivCalender"
+                android:layout_marginStart="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/colorDarkGrey"
+                    android:fontFamily="@font/bold_italic"
+                    android:text="@string/date_of_birth"
+                    android:layout_gravity="start"
+                    android:textAlignment="viewStart"/>
+
+                <TextView
+                    android:id="@+id/tvDob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorDark"
+                    android:fontFamily="@font/bold_italic"
+                    android:layout_gravity="start"
+                    android:textAlignment="viewStart"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivCalender"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/calendar"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvSaveProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_profile"
+        android:gravity="center"
+        android:background="@drawable/btn_bg"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/bold_italic"
+        android:textColor="@color/colorWhite"/>
+
+
+</RelativeLayout>

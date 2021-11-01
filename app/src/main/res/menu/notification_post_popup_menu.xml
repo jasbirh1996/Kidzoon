@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/removeNotification"
+        android:title="@string/remove_this_notification" />
+    <item android:id="@+id/unfriend"
+        android:title="@string/unfriend"/>
+
+
+</menu>

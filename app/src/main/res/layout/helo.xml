@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.WhatsYourNameActivity">
+
+    <include
+        layout="@layout/transparent_toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llTop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlMale"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:background="@drawable/gender_bg"
+                    android:visibility="visible"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/male" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/camera"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:layout_margin="25dp"
+                    android:background="@drawable/login_edittext_bg">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/profile_unselected"
+                        android:layout_gravity="center_vertical|start"/>
+
+                    <EditText
+                        android:id="@+id/etUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/enter_your_name"
+                        android:textColorHint="@color/colorDarkGrey"
+                        android:textColor="@color/colorDark"
+                        android:textSize="13sp"
+                        android:padding="7dp"
+                        android:layout_marginStart="7dp"
+                        android:textAlignment="viewStart"
+                        android:layout_gravity="start|center_vertical"
+                        android:fontFamily="@font/bold_italic"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/how_old_are_you"
+                    android:textColor="@color/colorDark"
+                    android:fontFamily="@font/bold_italic"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:layout_marginTop="30dp"/>
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:fitsSystemWindows="true"
+                android:layout_below="@id/llTop"
+                android:layout_marginTop="-70dp"
+                android:background="@drawable/male_name_bg">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvCarousel"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardCornerRadius="15dp"
+                    android:elevation="4dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    app:cardUseCompatPadding="true"
+                    app:cardBackgroundColor="@color/colorWhite">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <com.htf.kidzoon.carousel.AnimatedTextCarouselViewPager
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/carouselViewPager"
+                            android:background="@android:color/transparent"
+                            android:clipToPadding="false"
+                            android:overScrollMode="never"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/years"
+                            android:textColor="@color/colorDark"
+                            android:layout_marginTop="-50dp"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/bold_italic"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/btnNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:layout_alignParentBottom="true"
+                    android:textAlignment="center"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_below="@id/cvCarousel"
+                    android:background="@drawable/next_button_bg"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/bold_italic"
+                    android:textColor="@color/colorWhite"/>
+
+
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/carrosselItemText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="@dimen/animated_text_carousel_deselected_text_alpha"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:fontFamily="@font/bold_italic"
+        android:textSize="@dimen/animated_text_carousel_text_size"
+        android:gravity="center"
+        android:textColor="@color/animated_text_carousel_text_color" />
+
+</RelativeLayout>

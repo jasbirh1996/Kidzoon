@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SelectPrivacyActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/transparent_toolbar"/>
+    
+    <TextView
+        android:id="@+id/tvMsg1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:text="@string/who_can_see_your_post"
+        android:textColor="@color/colorDark"
+        android:fontFamily="@font/bold_italic"
+        android:layout_marginStart="15dp"
+        android:textSize="14sp"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvMsg2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMsg1"
+        android:text="@string/your_post_will_show_up_in_news_feed_on_your_profile_and_in_search_results"
+        android:textColor="@color/colorDarkGrey"
+        android:fontFamily="@font/bold_italic"
+        android:layout_marginStart="15dp"
+        android:textSize="12sp"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:layout_marginTop="3dp"/>
+
+
+    <TextView
+        android:id="@+id/tvLearnAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMsg2"
+        android:text="@string/learn_more_about"
+        android:textColor="@color/colorDark"
+        android:fontFamily="@font/bold_italic"
+        android:layout_marginStart="15dp"
+        android:textSize="12sp"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/tvPostPrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tvLearnAbout"
+        app:layout_constraintTop_toBottomOf="@id/tvMsg2"
+        android:text="@string/post_privacy"
+        android:textColor="@color/colorRed"
+        android:fontFamily="@font/bold_italic"
+        android:layout_marginStart="5dp"
+        android:textSize="12sp"
+        android:layout_marginTop="15dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlPublic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/post_visibility_circular_bg"
+        android:backgroundTint="@color/colorGrey"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLearnAbout"
+        android:layout_marginTop="20dp"
+        android:gravity="start|center_vertical"
+        android:layout_marginStart="15dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/visibility"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvPublic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/rlPublic"
+        app:layout_constraintBottom_toBottomOf="@id/rlPublic"
+        app:layout_constraintStart_toEndOf="@id/rlPublic"
+        android:text="@string/public_"
+        android:textColor="@color/colorDark"
+        android:fontFamily="@font/bold_italic"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tvAnyone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/rlPublic"
+        app:layout_constraintTop_toBottomOf="@id/tvPublic"
+        android:text="@string/anyone_on_or_off_kidzoon"
+        android:textColor="@color/colorDarkGrey"
+        android:fontFamily="@font/bold_italic"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"/>
+
+    <RadioButton
+        android:id="@+id/rbPublic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvPublic"
+        app:layout_constraintBottom_toBottomOf="@id/tvAnyone"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+       android:buttonTint="@color/colorRed" />
+
+    <View
+        android:id="@+id/viewPublic"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorDarkGrey"
+        app:layout_constraintStart_toStartOf="@id/rlPublic"
+        app:layout_constraintEnd_toEndOf="@id/rbPublic"
+        app:layout_constraintTop_toBottomOf="@id/tvAnyone"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlFriends"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/post_visibility_circular_bg"
+        android:backgroundTint="@color/colorGrey"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewPublic"
+        android:layout_marginTop="10dp"
+        android:gravity="start|center_vertical"
+        android:layout_marginStart="15dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/specific_friend"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/rlFriends"
+        app:layout_constraintBottom_toBottomOf="@id/rlFriends"
+        app:layout_constraintStart_toEndOf="@id/rlFriends"
+        android:text="@string/friends"
+        android:textColor="@color/colorDark"
+        android:fontFamily="@font/bold_italic"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tvFriendOnKidzoon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/rlFriends"
+        app:layout_constraintTop_toBottomOf="@id/tvFriends"
+        android:text="@string/your_friend_on_kidzoon"
+        android:textColor="@color/colorDarkGrey"
+        android:fontFamily="@font/bold_italic"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"/>
+
+    <RadioButton
+        android:id="@+id/rbFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvFriends"
+        app:layout_constraintBottom_toBottomOf="@id/tvFriendOnKidzoon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:buttonTint="@color/colorRed" />
+
+    <View
+        android:id="@+id/viewFriends"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorDarkGrey"
+        app:layout_constraintStart_toStartOf="@id/rlFriends"
+        app:layout_constraintEnd_toEndOf="@id/rbFriends"
+        app:layout_constraintTop_toBottomOf="@id/tvFriendOnKidzoon"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlFriendsExcept"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/post_visibility_circular_bg"
+        android:backgroundTint="@color/colorGrey"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewFriends"
+        android:layout_marginTop="10dp"
+        android:gravity="start|center_vertical"
+        android:layout_marginStart="15dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/except_share_post"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvFriendsExcept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/rlFriendsExcept"
+        app:layout_constraintBottom_toBottomOf="@id/rlFriendsExcept"
+        app:layout_constraintStart_toEndOf="@id/rlFriendsExcept"
+        android:text="@string/friends_except"
+        android:textColor="@color/colorDark"
+        android:fontFamily="@font/bold_italic"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tvDontShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/rlFriendsExcept"
+        app:layout_constraintTop_toBottomOf="@id/tvFriendsExcept"
+        android:text="@string/dont_show_to_some_friends"
+        android:textColor="@color/colorDarkGrey"
+        android:fontFamily="@font/bold_italic"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:id="@+id/ivFriendsExcept"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="@id/tvFriendsExcept"
+        app:layout_constraintBottom_toBottomOf="@id/tvDontShow"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/back"
+        android:tint="@color/colorDarkGrey"
+        android:rotation="180"/>
+
+    <View
+        android:id="@+id/viewFriendsExcept"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorDarkGrey"
+        app:layout_constraintStart_toStartOf="@id/rlFriendsExcept"
+        app:layout_constraintEnd_toEndOf="@id/ivFriendsExcept"
+        app:layout_constraintTop_toBottomOf="@id/tvDontShow"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlSpecificFriends"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/post_visibility_circular_bg"
+        android:backgroundTint="@color/colorGrey"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewFriendsExcept"
+        android:layout_marginTop="10dp"
+        android:gravity="start|center_vertical"
+        android:layout_marginStart="15dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/friend"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvSpecificFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/rlSpecificFriends"
+        app:layout_constraintBottom_toBottomOf="@id/rlSpecificFriends"
+        app:layout_constraintStart_toEndOf="@id/rlSpecificFriends"
+        android:text="@string/specific_friends"
+        android:textColor="@color/colorDark"
+        android:fontFamily="@font/bold_italic"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tvShowToSomeFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/rlSpecificFriends"
+        app:layout_constraintTop_toBottomOf="@id/tvSpecificFriends"
+        android:text="@string/only_show_to_some_friends"
+        android:textColor="@color/colorDarkGrey"
+        android:fontFamily="@font/bold_italic"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:id="@+id/ivSpecificFriends"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="@id/tvSpecificFriends"
+        app:layout_constraintBottom_toBottomOf="@id/tvShowToSomeFriends"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/back"
+        android:tint="@color/colorDarkGrey"
+        android:rotation="180"/>
+
+    <View
+        android:id="@+id/viewSpecificFriends"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorDarkGrey"
+        app:layout_constraintStart_toStartOf="@id/rlSpecificFriends"
+        app:layout_constraintEnd_toEndOf="@id/ivSpecificFriends"
+        app:layout_constraintTop_toBottomOf="@id/tvShowToSomeFriends"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlOnlyMe"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/post_visibility_circular_bg"
+        android:backgroundTint="@color/colorGrey"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewSpecificFriends"
+        android:layout_marginTop="10dp"
+        android:gravity="start|center_vertical"
+        android:layout_marginStart="15dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/password"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvOnlyMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/rlOnlyMe"
+        app:layout_constraintBottom_toBottomOf="@id/rlOnlyMe"
+        app:layout_constraintStart_toEndOf="@id/rlOnlyMe"
+        android:text="@string/only_me"
+        android:textColor="@color/colorDark"
+        android:fontFamily="@font/bold_italic"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tvForMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/rlOnlyMe"
+        app:layout_constraintTop_toBottomOf="@id/tvOnlyMe"
+        android:text="@string/only_me"
+        android:textColor="@color/colorDarkGrey"
+        android:fontFamily="@font/bold_italic"
+        android:textSize="14sp"
+        android:layout_marginStart="10dp"/>
+
+    <RadioButton
+        android:id="@+id/rbOnlyMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvOnlyMe"
+        app:layout_constraintBottom_toBottomOf="@id/tvForMe"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:buttonTint="@color/colorRed" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

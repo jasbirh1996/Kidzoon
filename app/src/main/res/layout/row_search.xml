@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/ivFriendImage"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/profile_image"
+            app:siRadius="20dp"
+            app:siBorderColor="@color/colorWhite"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/online"
+            android:layout_marginEnd="5dp"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvFriendName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saad Almubaraaz"
+            android:textColor="@color/colorDark"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/bold_italic"
+            android:textAlignment="viewStart"
+            android:layout_gravity="center_vertical|start"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorDarkGrey"/>
+
+
+
+</LinearLayout>

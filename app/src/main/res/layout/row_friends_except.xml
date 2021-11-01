@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_marginTop="5dp">
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/ivFriendImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/profile_image"
+        app:siRadius="20dp"
+        app:siSquare="true"
+        app:siBorderColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tvFriendName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saad"
+        app:layout_constraintTop_toTopOf="@id/ivFriendImage"
+        app:layout_constraintBottom_toBottomOf="@id/ivFriendImage"
+        app:layout_constraintStart_toEndOf="@id/ivFriendImage"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/colorDark"
+        android:textSize="14sp"
+        android:fontFamily="@font/bold_italic"/>
+
+    <ImageView
+        android:id="@+id/ivExcept"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:src="@drawable/except"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorDarkGrey"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="60dp"
+        app:layout_constraintStart_toStartOf="@id/tvFriendName"
+        app:layout_constraintEnd_toEndOf="@id/ivExcept"
+        app:layout_constraintTop_toBottomOf="@id/tvFriendName"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
